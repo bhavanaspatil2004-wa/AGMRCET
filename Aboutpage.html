@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About AGM Group of Institutions</title>
+  <style>
+    :root {
+      --bg: #fff5f7;          /* very light pink background */
+      --card: #ffffff;        /* white cards */
+      --text: #4a044e;        /* deep pink text */
+      --accent: #ec4899;      /* pink accent */
+      --muted: #9d174d;       /* muted rose */
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* Header */
+    .header {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--accent);
+      color: #fff;
+      border-bottom: 2px solid #be185d;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    .brand { display: flex; justify-content: center; margin-bottom: 12px; }
+    .brand h1 { font-size: clamp(1.2rem, 2vw, 1.8rem); margin: 0; }
+
+    /* Section */
+    section {
+      max-width: 1100px; margin: 0 auto; padding: clamp(40px, 6vw, 60px) 16px;
+    }
+    section h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); margin-bottom: 20px; color: var(--accent); }
+    .card {
+      background: var(--card);
+      border: 1px solid #fbcfe8;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(236,72,153,0.15);
+      margin-bottom: 20px;
+    }
+    .card p {
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    /* Images inside card */
+    .card img {
+      max-width: 50%;
+      height: auto;
+      border-radius: 70%;
+      float: left;
+      margin-right: 15px;
+    }
+
+    /* Motivational Line */
+    .quote {
+      margin-top: 24px;
+      padding: 16px;
+      background: #fdf2f8;
+      border: 2px solid #fbcfe8;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: 600;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+    }
+
+    footer { text-align: center; color: var(--muted); margin: 40px auto; font-size: clamp(0.8rem, 1.2vw, 0.9rem); }
+
+    /* Back button */
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ec4899;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    a:hover { background-color: #be185d; }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .card img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+      }
+      .card p {
+        text-align: center;
+      }
+      section { padding: 30px 14px; }
+      .brand h1 { font-size: 1.3rem; }
+      footer { margin: 30px auto; padding: 10px; }
+    }
+
+    @media (max-width: 480px) {
+      .brand h1 { font-size: 1.1rem; }
+      section h2 { font-size: 1.3rem; }
+      .card { padding: 20px; }
+      .card p { font-size: 0.95rem; }
+      a { display: block; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="home">
+    <div class="wrap">
+      <div class="brand"><h1>AGM Group of Institutions</h1></div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="card">
+      <p>
+        AGM Group of Institutions is committed to providing quality education across diverse fields —
+        from Business Administration and Computer Applications to Engineering, Polytechnic, Ayurveda,
+        and Pharmacy. Our mission is to nurture talent, inspire innovation, and empower students to
+        become leaders who contribute meaningfully to society. With dedicated faculty, modern facilities, 
+        and a focus on holistic development, we strive to create an environment where students can
+        achieve academic excellence and personal growth.
+      </p>
+
+      <!-- Founder’s Message Section -->
+      <section id="founder-message" class="card">
+        <h2>Founder’s Message</h2>
+        <img src="D:\Miniproject\swaji.png" alt="Founder Image">
+        <p>
+          Param Poojya Rastrasant Acharya Sri 108 Gunadhar Nandi Maharaj envisioned AGM Group of Institutions as a center of excellence committed to shaping students’ character, skills, and service to society.
+          "Motivating students with a sense of purpose is the only way to deliver innovate product and ensure the quality to society."
+        </p>
+        <div style="clear:both;"></div>
+      </section>
+
+      <!-- President’s Message Section -->
+      <section id="president-message" class="card">
+        <h2>President’s Message</h2>
+        <img src="D:\Miniproject\president.png" alt="President Image">
+        <p>
+          Swasti Sri Dharmasena Bhattaraka Pattacharya Mahaswamiji leads AGM with vision for holistic learning, empowering students to become confident leaders and innovators in their fields.
+          Together, let us strive for greatness and build a brighter future.
+        </p>
+        <div style="clear:both;"></div>
+      </section>
+
+      <!-- Principal’s Message Section -->
+      <section id="principal-message" class="card">
+        <h2>Principal’s Message</h2>
+        <img src="D:\Miniproject\director princi.png" alt="Principal Image">
+        <p>
+          Dr. Sandeep Kyatanavar is dedicated to fostering a holistic educational environment that nurtures talents, inspires innovation, and prepares students for global challenges.
+          AGMRCET has been a known institute since a decade, for its qualitative teaching.
+        </p>
+        <div style="clear:both;"></div>
+      </section>
+
+      <!-- Motivational Line -->
+      <div class="quote">
+        “Purpose is the only way to deliver innovative products and ensure quality to society.”
+      </div>
+    </div>
+  </section>
+
+  <a href="index.html">Back to Home</a>
+
+  <footer>© AGM Group of Institutions — Bengaluru, Karnataka</footer>
+</body>
+</html>

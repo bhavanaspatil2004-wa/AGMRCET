@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AGM Departments</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #f8fafc;
+      --text: #1e293b;
+      --accent: #1e3a8a;
+      --muted: #64748b;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* Header */
+    .header {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--accent);
+      color: #fff;
+      border-bottom: 2px solid #0f172a;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+    .brand { display: flex; justify-content: center; margin-bottom: 12px; text-align: center; }
+    .brand h1 { font-size: clamp(1.2rem, 2vw, 1.8rem); margin: 0; }
+
+    /* Buttons */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .buttons a {
+      flex: 1 1 auto;
+      min-width: 140px;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      background: #0f172a;
+      transition: transform 120ms ease, box-shadow 120ms ease;
+      font-weight: 600;
+    }
+    .buttons a:hover {
+      transform: translateY(-2px);
+      background: #1e40af;
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+    }
+
+    /* Sections */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(40px, 6vw, 60px) 16px;
+      scroll-margin-top: 100px;
+    }
+    section h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 20px;
+      display: grid;
+      gap: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .list {
+      display: grid;
+      gap: 8px;
+    }
+    .list li {
+      list-style: none;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #e0f2fe;
+      border: 1px solid #bae6fd;
+      font-size: clamp(0.9rem, 1.5vw, 1rem);
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      margin: 40px auto;
+      font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+    }
+
+    /* Fixed Back Button */
+    .back-home {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+      transition: background 0.3s ease, transform 0.2s ease;
+      z-index: 2000;
+    }
+    .back-home:hover {
+      background: #0f172a;
+      transform: translateX(-50%) scale(1.05);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      color: var(--accent);
+    }
+    .college-logo {
+      max-height: 50px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .buttons {
+        gap: 8px;
+      }
+      .buttons a {
+        min-width: 120px;
+        font-size: 0.95rem;
+        padding: 10px;
+      }
+      section {
+        padding: 30px 12px;
+      }
+      .card {
+        padding: 16px;
+      }
+      .list li {
+        font-size: 0.95rem;
+      }
+      .section-heading {
+        flex-direction: column;
+        text-align: center;
+      }
+      .college-logo {
+        max-height: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand h1 {
+        font-size: 1.2rem;
+      }
+      .buttons a {
+        min-width: 100%;
+        font-size: 0.9rem;
+      }
+      .back-home {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+      }
+      .list li {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="home">
+    <div class="wrap">
+      <div class="brand"><h1>AGM Group of Institutions</h1></div>
+      <nav class="buttons">
+        <a href="#bba-bca">BBA & BCA</a>
+        <a href="#engineering">Engineering</a>
+        <a href="#polytechnic">Polytechnic</a>
+        <a href="#medical">Medical</a>
+        <a href="#pharmacy">Pharmacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BBA & BCA -->
+  <section id="bba-bca">
+    <h2>AGM College of BBA & BCA</h2>
+    <p class="subtitle">Departments&HOD's.</p>
+    <div class="card">
+      <ul class="list">
+        <li>Bachelors of Business Administration — Mrs. Shweta Konanavar</li>
+        <li>Bachelors of Computer Applications — Mrs. Shweta Konanavar</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Engineering -->
+  <section id="engineering">
+    <h2>AGM College of Engineering & Technology</h2>
+    <p class="subtitle">Core and emerging engineering disciplines.<br>Departments and HOD'S.</p>
+    <div class="card">
+      <ul class="list">
+        <li>Computer Science and Engineering — Dr. Tabasum Guledgudd</li>
+        <li>CSE (AIML) — Mr. Irshad Ahmad Gorikhan</li>
+        <li>Computer Science & Design — Dr. Shantabhushan B M</li>
+        <li>Civil Engineering — Mrs. Madhu Janki</li>
+        <li>Electronics & Communication — Mr. Basavaraj G</li>
+        <li>Electrical & Electronics (EEE) — Mrs. Reshma U</li>
+        <li>Mechanical Engineering — Dr. Zaheerabbas B K</li>
+        <li>Basic Engineering & Humanities — Dr. Mahesh Bannur</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Polytechnic -->
+  <section id="polytechnic">
+    <h2>AGM Polytechnic (Coorg)</h2>
+    <p class="subtitle">Diploma programs with hands-on training.<br>Departments and HOD'S</p>
+    <div class="card">
+      <ul class="list">
+        <li>Diploma in Civil Engineering</li>
+        <li>Diploma in Computer Engineering</li>
+        <li>Diploma in Electronics & Communication</li>
+        <li>Diploma in Mechanical Engineering</li>
+        <li>Diploma in Electrical Engineering</li>
+        <li>Electronics & Communication — Mr. Raveendra B C</li>
+        <li>Mechanical Engineering — Mr. Lingaraj Gondenaykar</li>
+        <li>Civil Engineering — Mr. Santosh K</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Medical -->
+  <section id="medical">
+    <h2>AGM Ayurvedic Medical College</h2>
+    <p class="subtitle">Holistic education in Ayurveda.<br>Departments</p>
+    <div class="card">
+      <ul class="list">
+        <li>BAMS, PG certifications</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Pharmacy -->
+  <section id="pharmacy">
+    <h2>AGM College of Pharmacy</h2>
+    <p class="subtitle">Pharmaceutical sciences with industry orientation.<br>Departments and HOD'S</p>
+    <div class="card">
+      <ul class="list">
+        <li>D.Pharm (Diploma in Pharmacy)</li>
+        <li>B.Pharm (Bachelors in Pharmacy)</li>
+        <li>M.Pharm</li>
+        <li>Principal — Dr. S N Srinivas</li>
+        <li>Professor — Mr. Nandish D I</li>
+        <li>Professor — Dr. Srinivas M T</li>
+        <li>Professor — Dr. ShivYog H Patil</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>© AGM Group of Institutions — Bengaluru, Karnataka</footer>
+
+  <!-- Fixed Back Button -->
+  <a href="index.html" class="back-home">⬆ Back to Home</a>
+</body>
+</html>
